@@ -61,6 +61,7 @@ video{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .content__list{
@@ -90,6 +91,7 @@ video{
   position: relative;
   width: 711px;
   height: 386px;
+  inset: 0px;
 }
 
 .content__list-item:not(:last-child) {
@@ -105,7 +107,7 @@ video{
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;  
+  height: 107px;  
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -172,39 +174,74 @@ video{
   white-space: nowrap;
 }
 
-fieldset{
+fieldset {
   border: none;
 }
 
 .search-form__label {
-  display: inline-flex;
+  display: flex;
   width: fit-content;
+  gap: 6px;
+  cursor: pointer;
 }
 
-/* input{
-  all: unset;
-} */
 
-
-.search-form__textfield{
-  font-family: 'Fira Sans Condensed', sans-serif;
+.search-form__textfield {
+  width: 225px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 0px transparent;
+  border-left: 0px transparent;
+  border-color: #fff;
+  color: #ffffffb3;
+  background-color: transparent;
+  font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  color:#ffffffb3;
+  appearance: none;
   padding: 2px 0px;
-  background-color: transparent;
 }
 
-input.search-form__textfield{
-  border-width: 1px 0px 1px 0px;
-  border-color: #fff;
-}
-
-.search-form__checkbox-list{
+.search-form__checkbox-list {
   display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
 }
 
+.search-form__pseudo-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: transparent;
+  position: relative;
+}
 
+.search-form__pseudo-checkbox::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #000;
+  position: absolute;
+}
 
+.search-form__fieldset{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
+.search-form__fieldset-title{
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+.button {
+  width: 194px;
+  height: 34px;
+}
