@@ -273,14 +273,6 @@ fieldset {
   position: absolute;
 }
 
-.search-form__pseudo-checkbox::after {
-  content: '';
-  width: 14px;
-  height: 14px;
-  background: #000;
-  position: absolute;
-}
-
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
